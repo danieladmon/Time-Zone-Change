@@ -9,7 +9,7 @@ TIMEZONE=$(timedatectl list-timezones | grep -m 1 ${ARGS// /_})
 
 if [[ "$TIMEZONE" ]]; then
         $(sudo timedatectl set-timezone $TIMEZONE)
-        echo "Time zone has change to: $TIMEZONE"
+        echo "Time zone has changed to: $TIMEZONE"
 else
         echo "Time zone not found"
 fi
